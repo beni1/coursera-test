@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl, 
-  buildAndShowHomeHTM, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowHomeHTM(), // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -103,7 +103,7 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
 
-       var chosenCategoryShortName = chooseRandomCategory(categories).Short_Name; 
+       var chosenCategoryShortName = chooseRandomCategory(categories).homeHtmlUrl; 
       
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
